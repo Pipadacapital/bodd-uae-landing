@@ -7,10 +7,10 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-neutral-200 bg-neutral-100 py-12">
+    <footer className="border-t border-neutral-200 bg-neutral-100 py-10 sm:py-12">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <SectionReveal>
-          <div className="flex flex-col items-center justify-between gap-8 sm:flex-row sm:items-start">
+          <div className="flex flex-col items-center justify-between gap-6 text-center sm:flex-row sm:items-start sm:gap-8 sm:text-left">
             <div className="flex flex-col items-center sm:items-start">
               <BrandLogo size="sm" />
               <p className="mt-3 max-w-xs text-center text-xs text-neutral-600 sm:text-left">

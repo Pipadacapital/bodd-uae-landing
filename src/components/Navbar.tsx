@@ -22,12 +22,13 @@ export function Navbar() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className="fixed top-0 left-0 right-0 z-50 border-b border-neutral-200/80 bg-white/85 backdrop-blur-xl"
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
-        <a href="#" className="relative flex shrink-0 items-center">
-          <BrandLogo size="md" priority />
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-6 sm:py-4 lg:px-10">
+        <a href="#" className="relative flex min-w-0 shrink-0 items-center">
+          <BrandLogo size="sm" priority className="sm:hidden" />
+          <BrandLogo size="md" priority className="hidden sm:block" />
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-6 lg:flex lg:gap-8">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
@@ -42,7 +43,7 @@ export function Navbar() {
 
         <a
           href="#contact"
-          className="hidden rounded-full border border-neutral-300 bg-white px-5 py-2 text-sm font-medium tracking-wide text-neutral-900 shadow-sm transition-all hover:border-neutral-400 hover:shadow md:inline-block"
+          className="hidden rounded-full border border-neutral-300 bg-white px-5 py-2 text-sm font-medium tracking-wide text-neutral-900 shadow-sm transition-all hover:border-neutral-400 hover:shadow lg:inline-block"
         >
           Shop UAE
         </a>
@@ -52,7 +53,7 @@ export function Navbar() {
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen(!open)}
-          className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
+          className="relative z-50 ml-auto flex h-10 w-10 shrink-0 flex-col items-center justify-center gap-1.5 lg:hidden"
         >
           <span
             className={`block h-0.5 w-6 bg-neutral-900 transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}
@@ -72,7 +73,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden border-t border-neutral-200 bg-white md:hidden"
+            className="overflow-hidden border-t border-neutral-200 bg-white lg:hidden"
           >
             <ul className="flex flex-col gap-1 px-5 py-4">
               {navLinks.map((link, i) => (

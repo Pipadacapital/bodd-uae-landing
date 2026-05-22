@@ -27,7 +27,7 @@ export function Philosophy() {
   return (
     <section
       id="philosophy"
-      className="relative border-t border-neutral-200/80 py-24 sm:py-32"
+      className="relative border-t border-neutral-200/80 bg-page py-16 sm:py-24 md:py-32"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <SectionReveal>
@@ -36,7 +36,7 @@ export function Philosophy() {
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#0097b2]">
                 Core Philosophy
               </p>
-              <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
+              <h2 className="font-display mt-3 text-2xl font-bold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
                 Discipline, redefined
               </h2>
             </div>

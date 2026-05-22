@@ -23,10 +23,10 @@ export function Hero() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24 pb-16">
+    <section className="relative flex min-h-[100dvh] items-center justify-center overflow-hidden bg-page pt-20 pb-12 sm:pt-24 sm:pb-16">
       <div className="absolute inset-0 grid-overlay opacity-50" />
-      <div className="glow-orb holo-gradient absolute -top-32 left-1/4 h-[500px] w-[500px] rounded-full" />
-      <div className="glow-orb absolute -bottom-20 right-0 h-[400px] w-[400px] rounded-full bg-[#ff00aa]/25" />
+      <div className="glow-orb holo-gradient absolute -top-20 left-1/4 h-[220px] w-[220px] rounded-full sm:-top-32 sm:h-[400px] sm:w-[400px] lg:h-[500px] lg:w-[500px]" />
+      <div className="glow-orb absolute -bottom-10 right-0 h-[180px] w-[180px] rounded-full bg-[#ff00aa]/20 sm:-bottom-20 sm:h-[320px] sm:w-[320px] lg:h-[400px] lg:w-[400px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <motion.div
@@ -35,8 +35,9 @@ export function Hero() {
           animate="show"
           className="max-w-4xl"
         >
-          <motion.div variants={item} className="mb-8">
-            <BrandLogo size="lg" priority />
+          <motion.div variants={item} className="mb-6 sm:mb-8">
+            <BrandLogo size="md" priority className="sm:hidden" />
+            <BrandLogo size="lg" priority className="hidden sm:block" />
           </motion.div>
 
           <motion.p
@@ -48,7 +49,7 @@ export function Hero() {
 
           <motion.h1
             variants={item}
-            className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-neutral-900 sm:text-6xl md:text-7xl lg:text-8xl"
+            className="font-display text-3xl font-bold leading-[1.08] tracking-tight text-neutral-900 sm:text-5xl md:text-6xl lg:text-7xl"
           >
             Fitness meets{" "}
             <span className="holo-text">high fashion</span>
@@ -83,18 +84,18 @@ export function Hero() {
 
           <motion.div
             variants={item}
-            className="mt-12 flex flex-wrap items-center gap-6 border-t border-neutral-200 pt-8 sm:gap-10"
+            className="mt-10 flex flex-col gap-4 border-t border-neutral-200 pt-6 sm:mt-12 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6 sm:pt-8 md:gap-10"
           >
-            <div>
-              <p className="font-display text-2xl font-bold text-neutral-900 sm:text-3xl">
+            <div className="shrink-0">
+              <p className="font-display text-xl font-bold text-neutral-900 sm:text-2xl md:text-3xl">
                 BODD
               </p>
-              <p className="text-xs uppercase tracking-widest text-neutral-500">
+              <p className="text-[10px] uppercase tracking-widest text-neutral-500 sm:text-xs">
                 Build Optimal Daily Discipline
               </p>
             </div>
-            <div className="hidden h-10 w-px bg-neutral-200 sm:block" />
-            <p className="max-w-xs text-sm text-neutral-600">
+            <div className="hidden h-10 w-px shrink-0 bg-neutral-200 md:block" />
+            <p className="max-w-xs text-sm leading-relaxed text-neutral-600">
               Vibrant aesthetics. Squat-proof fabrics. Seamless transition from
               studio to street.
             </p>

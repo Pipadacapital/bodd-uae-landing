@@ -38,8 +38,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${syne.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+    <html
+      lang="en"
+      className={`${outfit.variable} ${syne.variable} bg-page text-neutral-900`}
+      style={{ colorScheme: "light" }}
+    >
+      <body className="min-h-screen bg-page font-sans antialiased text-neutral-900">
+        {children}
+      </body>
     </html>
   );
 }

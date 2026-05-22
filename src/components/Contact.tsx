@@ -9,7 +9,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative border-t border-neutral-200/80 bg-white py-24 sm:py-32"
+      className="relative border-t border-neutral-200/80 bg-white py-16 sm:py-24 md:py-32"
     >
       <div className="glow-orb absolute left-1/2 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-cyan-200/40" />
 
@@ -19,7 +19,7 @@ export function Contact() {
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#0097b2]">
               UAE Launch
             </p>
-            <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
+            <h2 className="font-display mt-3 text-2xl font-bold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
               Join the movement
             </h2>
             <p className="mt-4 text-neutral-600">
@@ -52,7 +52,7 @@ export function Contact() {
         </SectionReveal>
 
         <SectionReveal delay={0.2}>
-          <div className="mt-16 flex flex-wrap items-center justify-center gap-8 text-center text-sm text-neutral-500">
+          <div className="mt-12 flex flex-col items-center justify-center gap-3 text-center text-sm text-neutral-500 sm:mt-16 sm:flex-row sm:flex-wrap sm:gap-6 md:gap-8">
             <a
               href="mailto:support@boddactive.ae"
               className="transition-colors hover:text-neutral-900"

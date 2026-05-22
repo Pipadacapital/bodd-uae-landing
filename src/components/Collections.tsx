@@ -48,7 +48,7 @@ export function Collections() {
   return (
     <section
       id="collections"
-      className="relative overflow-hidden border-t border-neutral-200/80 bg-white py-24 sm:py-32"
+      className="relative overflow-hidden border-t border-neutral-200/80 bg-white py-16 sm:py-24 md:py-32"
     >
       <div className="glow-orb holo-gradient absolute right-0 top-1/2 h-[300px] w-[300px] -translate-y-1/2 rounded-full" />
 
@@ -57,7 +57,7 @@ export function Collections() {
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#c4007a]">
             Product Lines
           </p>
-          <h2 className="font-display mt-3 max-w-2xl text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
+          <h2 className="font-display mt-3 max-w-2xl text-2xl font-bold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
             Engineered for every movement
           </h2>
         </SectionReveal>

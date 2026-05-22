@@ -30,14 +30,14 @@ export function Performance() {
     <section
       id="performance"
       ref={ref}
-      className="relative border-t border-neutral-200/80 py-24 sm:py-32"
+      className="relative overflow-x-hidden border-t border-neutral-200/80 bg-page py-16 sm:py-24 md:py-32"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <SectionReveal>
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#6d28d9]">
             Performance
           </p>
-          <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
+          <h2 className="font-display mt-3 text-2xl font-bold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
             Built for intensity
           </h2>
           <p className="mt-4 max-w-2xl text-neutral-600">
@@ -46,8 +46,8 @@ export function Performance() {
           </p>
         </SectionReveal>
 
-        <div className="mt-14 overflow-hidden">
-          <motion.div style={{ x }} className="flex gap-4 sm:gap-6">
+        <div className="-mx-5 mt-10 overflow-x-hidden sm:-mx-8 sm:mt-14 lg:-mx-10">
+          <motion.div style={{ x }} className="flex w-max gap-3 px-5 sm:gap-4 sm:px-8 lg:gap-6 lg:px-10">
             {[...specs, ...specs].map((spec, i) => (
               <div
                 key={`${spec.label}-${i}`}
@@ -66,7 +66,7 @@ export function Performance() {
 
         <SectionReveal delay={0.15}>
           <div className="mt-16 rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm sm:p-12">
-            <blockquote className="font-display text-xl font-medium leading-snug text-neutral-900 sm:text-2xl md:text-3xl">
+            <blockquote className="font-display text-lg font-medium leading-snug text-neutral-900 sm:text-2xl md:text-3xl">
               &ldquo;From high-intensity workouts to casual everyday —
               <span className="holo-text"> one wardrobe, infinite discipline.</span>&rdquo;
             </blockquote>
