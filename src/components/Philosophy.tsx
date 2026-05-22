@@ -27,20 +27,20 @@ export function Philosophy() {
   return (
     <section
       id="philosophy"
-      className="relative border-t border-white/5 py-24 sm:py-32"
+      className="relative border-t border-neutral-200/80 py-24 sm:py-32"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <SectionReveal>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#00e5ff]">
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#0097b2]">
                 Core Philosophy
               </p>
-              <h2 className="font-display mt-3 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
                 Discipline, redefined
               </h2>
             </div>
-            <p className="max-w-md text-sm leading-relaxed text-neutral-400 sm:text-base">
+            <p className="max-w-md text-sm leading-relaxed text-neutral-600 sm:text-base">
               Merging durability and functional design with runway-inspired
               fashion — encouraging a consistent, active lifestyle across the
               UAE.
@@ -57,18 +57,18 @@ export function Philosophy() {
                     ? undefined
                     : { y: -4, transition: { duration: 0.25 } }
                 }
-                className="group relative overflow-hidden rounded-2xl border border-white/8 bg-[#111] p-8 transition-colors hover:border-white/15"
+                className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm transition-all hover:border-neutral-300 hover:shadow-md"
               >
                 <div className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100">
-                  <div className="holo-gradient absolute -right-20 -top-20 h-40 w-40 rounded-full opacity-10 blur-2xl" />
+                  <div className="holo-gradient absolute -right-20 -top-20 h-40 w-40 rounded-full opacity-15 blur-2xl" />
                 </div>
-                <span className="font-display text-5xl font-bold text-white/10">
+                <span className="font-display text-5xl font-bold text-neutral-100">
                   0{i + 1}
                 </span>
-                <h3 className="font-display relative mt-4 text-xl font-semibold">
+                <h3 className="font-display relative mt-4 text-xl font-semibold text-neutral-900">
                   {pillar.title}
                 </h3>
-                <p className="relative mt-3 text-sm leading-relaxed text-neutral-400">
+                <p className="relative mt-3 text-sm leading-relaxed text-neutral-600">
                   {pillar.description}
                 </p>
               </motion.article>

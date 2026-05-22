@@ -30,17 +30,17 @@ export function Performance() {
     <section
       id="performance"
       ref={ref}
-      className="relative border-t border-white/5 py-24 sm:py-32"
+      className="relative border-t border-neutral-200/80 py-24 sm:py-32"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <SectionReveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#8b5cf6]">
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#6d28d9]">
             Performance
           </p>
-          <h2 className="font-display mt-3 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+          <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
             Built for intensity
           </h2>
-          <p className="mt-4 max-w-2xl text-neutral-400">
+          <p className="mt-4 max-w-2xl text-neutral-600">
             High-performance fabrics that hold up through every rep, stretch,
             and stride — then carry you through the rest of your day in style.
           </p>
@@ -51,9 +51,9 @@ export function Performance() {
             {[...specs, ...specs].map((spec, i) => (
               <div
                 key={`${spec.label}-${i}`}
-                className="flex shrink-0 flex-col rounded-xl border border-white/8 bg-[#111] px-6 py-5 sm:px-8 sm:py-6"
+                className="flex shrink-0 flex-col rounded-xl border border-neutral-200 bg-white px-6 py-5 shadow-sm sm:px-8 sm:py-6"
               >
-                <span className="font-display text-lg font-bold whitespace-nowrap sm:text-xl">
+                <span className="font-display text-lg font-bold whitespace-nowrap text-neutral-900 sm:text-xl">
                   {spec.label}
                 </span>
                 <span className="mt-1 text-xs uppercase tracking-widest text-neutral-500 whitespace-nowrap">
@@ -65,8 +65,8 @@ export function Performance() {
         </div>
 
         <SectionReveal delay={0.15}>
-          <div className="mt-16 rounded-2xl border border-white/8 bg-gradient-to-r from-[#111] via-[#0a0a0a] to-[#111] p-8 sm:p-12">
-            <blockquote className="font-display text-xl font-medium leading-snug sm:text-2xl md:text-3xl">
+          <div className="mt-16 rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm sm:p-12">
+            <blockquote className="font-display text-xl font-medium leading-snug text-neutral-900 sm:text-2xl md:text-3xl">
               &ldquo;From high-intensity workouts to casual everyday —
               <span className="holo-text"> one wardrobe, infinite discipline.</span>&rdquo;
             </blockquote>

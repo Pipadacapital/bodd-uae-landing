@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { BrandLogo } from "./BrandLogo";
 
 const navLinks = [
   { label: "Philosophy", href: "#philosophy" },
@@ -20,18 +20,11 @@ export function Navbar() {
       initial={prefersReducedMotion ? false : { y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-black/60 backdrop-blur-xl"
+      className="fixed top-0 left-0 right-0 z-50 border-b border-neutral-200/80 bg-white/85 backdrop-blur-xl"
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
-        <a href="#" className="relative flex items-center">
-          <Image
-            src="/logo.png"
-            alt="Bodd Active UAE"
-            width={140}
-            height={48}
-            className="h-8 w-auto sm:h-10"
-            priority
-          />
+        <a href="#" className="relative flex shrink-0 items-center">
+          <BrandLogo size="md" priority />
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -39,7 +32,7 @@ export function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-medium tracking-wide text-neutral-400 transition-colors hover:text-white"
+                className="text-sm font-medium tracking-wide text-neutral-600 transition-colors hover:text-neutral-900"
               >
                 {link.label}
               </a>
@@ -49,7 +42,7 @@ export function Navbar() {
 
         <a
           href="#contact"
-          className="hidden rounded-full border border-white/20 bg-white/5 px-5 py-2 text-sm font-medium tracking-wide text-white transition-all hover:border-white/40 hover:bg-white/10 md:inline-block"
+          className="hidden rounded-full border border-neutral-300 bg-white px-5 py-2 text-sm font-medium tracking-wide text-neutral-900 shadow-sm transition-all hover:border-neutral-400 hover:shadow md:inline-block"
         >
           Shop UAE
         </a>
@@ -62,13 +55,13 @@ export function Navbar() {
           className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
         >
           <span
-            className={`block h-0.5 w-6 bg-white transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}
+            className={`block h-0.5 w-6 bg-neutral-900 transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}
           />
           <span
-            className={`block h-0.5 w-6 bg-white transition-opacity ${open ? "opacity-0" : ""}`}
+            className={`block h-0.5 w-6 bg-neutral-900 transition-opacity ${open ? "opacity-0" : ""}`}
           />
           <span
-            className={`block h-0.5 w-6 bg-white transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`}
+            className={`block h-0.5 w-6 bg-neutral-900 transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`}
           />
         </button>
       </nav>
@@ -79,7 +72,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden border-t border-white/5 bg-black/95 md:hidden"
+            className="overflow-hidden border-t border-neutral-200 bg-white md:hidden"
           >
             <ul className="flex flex-col gap-1 px-5 py-4">
               {navLinks.map((link, i) => (
@@ -92,7 +85,7 @@ export function Navbar() {
                   <a
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block py-3 text-lg font-medium text-neutral-300 hover:text-white"
+                    className="block py-3 text-lg font-medium text-neutral-700 hover:text-neutral-900"
                   >
                     {link.label}
                   </a>
@@ -102,7 +95,7 @@ export function Navbar() {
                 <a
                   href="#contact"
                   onClick={() => setOpen(false)}
-                  className="block rounded-full holo-gradient py-3 text-center text-sm font-semibold text-black"
+                  className="block rounded-full holo-gradient py-3 text-center text-sm font-semibold text-white"
                 >
                   Shop UAE
                 </a>
